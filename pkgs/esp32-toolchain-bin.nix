@@ -16,14 +16,14 @@ let
   };
 in
 
-assert stdenv.system == "x86_64-linux";
+assert stdenv.system == "x86_64-darwin";
 
 stdenv.mkDerivation rec {
   pname = "esp32-toolchain";
   inherit version;
 
   src = fetchurl {
-    url = "https://github.com/espressif/crosstool-NG/releases/download/esp-${version}/xtensa-esp32-elf-gcc8_4_0-esp-${version}-linux-amd64.tar.gz";
+    url = "https://github.com/espressif/crosstool-NG/releases/download/esp-${version}/xtensa-esp32-elf-gcc8_4_0-esp-${version}-macos.tar.gz";
     inherit hash;
   };
 

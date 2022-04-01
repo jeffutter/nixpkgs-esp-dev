@@ -8,14 +8,14 @@ let
   };
 in
 
-assert stdenv.system == "x86_64-linux";
+assert stdenv.system == "x86_64-darwin";
 
 stdenv.mkDerivation rec {
   pname = "esp8266-toolchain";
   version = "2020r3";
 
   src = fetchurl {
-    url = "https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-${version}-linux-amd64.tar.gz";
+    url = "https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-${version}-macos.tar.gz";
     hash = "sha256-ChgEteIjHG24tyr2vCoPmltplM+6KZVtQSZREJ8T/n4=";
   };
 
